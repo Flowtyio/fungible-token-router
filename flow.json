@@ -19,6 +19,26 @@
         "type": "file",
         "location": "emulator-account.pkey"
       }
+    },
+    "testnet-account": {
+      "address": "0x83231f90a288bc35",
+      "key": {
+        "type": "google-kms",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "projects/flowty-test/locations/global/keyRings/flow/cryptoKeys/fungible-token-router/cryptoKeyVersions/1"
+      }
+    },
+    "mainnet-account": {
+      "address": "0x707c0b39a8d689cb",
+      "key": {
+        "type": "google-kms",
+        "index": 0,
+        "signatureAlgorithm": "ECDSA_P256",
+        "hashAlgorithm": "SHA2_256",
+        "resourceID": "projects/flowty-prod/locations/global/keyRings/flow/cryptoKeys/fungible-token-router/cryptoKeyVersions/1"
+      }
     }
   },
   "contracts": {
@@ -84,6 +104,16 @@
       "emulator-ft": [
         "FungibleToken",
         "FungibleTokenMetadataViews"
+      ]
+    },
+    "testnet": {
+      "testnet-account": [
+        "FungibleTokenRouter"
+      ]
+    },
+    "mainnet": {
+      "mainnet-account": [
+        "FungibleTokenRouter"
       ]
     }
   }
