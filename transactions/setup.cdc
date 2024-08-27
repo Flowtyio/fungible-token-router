@@ -1,18 +1,3 @@
-# fungible-token-router
-
-A contract to help route tokens from one address to another. Each router needs a default
-address, and can optionally be given overrides for any cadence runtime type to another address.
-
-When tokens are deposited to the router, fungible token metadata views will resolve the receiver path for
-the deposited tokens and try to send them to whatever address is configured to receive them.
-
-If a receiver capability is not found at the expected path, depositing will panic.
-
-## Example Transactions
-
-### Setup Router
-
-```cadence
 import "FungibleTokenRouter"
 import "FungibleToken"
 
@@ -31,6 +16,3 @@ transaction(defaultAddress: Address) {
         }
     }
 }
-```
-
-### Add Override
