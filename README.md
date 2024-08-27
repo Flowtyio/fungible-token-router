@@ -8,6 +8,13 @@ the deposited tokens and try to send them to whatever address is configured to r
 
 If a receiver capability is not found at the expected path, depositing will panic.
 
+## Addresses
+
+| Network |     Address        |
+| ------- | ------------------ |
+| Testnet | 0x83231f90a288bc35 |
+| Mainnet | 0x707c0b39a8d689cb |
+
 ## Example Transactions
 
 ### Setup Router
