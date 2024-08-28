@@ -39,6 +39,13 @@
         "hashAlgorithm": "SHA2_256",
         "resourceID": "projects/flowty-prod/locations/global/keyRings/flow/cryptoKeys/fungible-token-router/cryptoKeyVersions/1"
       }
+    },
+    "emulator-flowtoken": {
+      "address": "0ae53cb6e3f42a79",
+      "key": {
+        "type": "file",
+        "location": "emulator-account.pkey"
+      }
     }
   },
   "contracts": {
@@ -90,6 +97,14 @@
         "testnet": "0x9a0766d93b6608b7",
         "mainnet": "0xf233dcee88fe0abe"
       }
+    },
+    "FlowToken": {
+      "source": "./node_modules/@flowtyio/flow-contracts/contracts/FlowToken.cdc",
+      "aliases": {
+        "emulator": "0x0ae53cb6e3f42a79",
+        "testnet": "0x7e60df042a9c0868",
+        "mainnet": "0x1654653399040a61"
+      }
     }
   },
   "deployments": {
@@ -104,6 +119,9 @@
       "emulator-ft": [
         "FungibleToken",
         "FungibleTokenMetadataViews"
+      ],
+      "emulator-flowtoken": [
+        "FlowToken"
       ]
     },
     "testnet": {
